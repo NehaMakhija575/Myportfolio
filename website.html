@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personal Website</title>
+    <style>
+        /* Reset some default browser styling */
+        body, h1, h2, p, a {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Apply some basic font styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        /* Navigation Styling */
+        .nav-bar {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .nav-bar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: 0 15px;
+        }
+
+        .nav-bar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Section Styling */
+        .section {
+            margin: 20px 0;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #444;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .about-me, .skills, .contact {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .skills li {
+            margin: 10px 0;
+        }
+
+        .skills span {
+            color: #007BFF;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .contact input, .contact textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Styling */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        /* Button Styling */
+        .greeting-button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .greeting-button:hover {
+            background-color: #218838;
+        }
+
+        /* Add responsive design */
+        @media (max-width: 600px) {
+            .nav-bar a {
+                display: block;
+                margin: 5px 0;
+            }
+
+            .section {
+                margin: 10px 0;
+            }
+
+            .skills ul {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact Me</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to My Personal Website</h1>
+
+        <!-- About Me Section -->
+        <div id="about" class="section about-me">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm John Doe, a passionate web developer with a love for creating interactive websites and user experiences.
+                I enjoy working with the latest technologies and learning new things every day.
+            </p>
+            <button class="greeting-button" onclick="displayGreeting()">Click for a Greeting!</button>
+            <p id="greeting-message"></p>
+        </div>
+
+        <!-- Skills Section -->
+        <div id="skills" class="section skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li><span>HTML5</span> - Building web pages and structuring content.</li>
+                <li><span>CSS3</span> - Styling and creating beautiful, responsive layouts.</li>
+                <li><span>JavaScript</span> - Adding interactivity and dynamic content to websites.</li>
+                <li><span>React</span> - Building modern, efficient, and scalable web applications.</li>
+                <li><span>Node.js</span> - Backend development with server-side JavaScript.</li>
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="section contact">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to send me a message!</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2025 John Doe. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function displayGreeting() {
+            const greetingMessage = document.getElementById('greeting-message');
+            greetingMessage.innerHTML = "Hello, thank you for visiting my personal website!";
+        }
+    </script>
+</body>
+</html>
